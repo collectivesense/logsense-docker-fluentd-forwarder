@@ -1,1 +1,1 @@
-# logsense-fluentd-forwarder
+# Docker Fluentd forwarder for LogSense

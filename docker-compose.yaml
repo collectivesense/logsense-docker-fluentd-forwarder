@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  logsense-forwarder:
+    image: fluent/fluentd:stable
+    ports:
+      - "24224:24224"
+    volumes:
+      - ./logsense.conf:/config/logsense.conf
+    restart: unless-stopped
+    command:
+      - fluentd
+      - -c
+      - /config/logsense.conf
+      - -v
