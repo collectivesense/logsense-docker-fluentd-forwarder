@@ -4,7 +4,7 @@ services:
   logsense-forwarder:
     image: fluent/fluentd:stable
     ports:
-      - "24224:24224"
+      - "127.0.0.1:24224:24224"
     volumes:
       - ./logsense.conf:/config/logsense.conf
     restart: unless-stopped
