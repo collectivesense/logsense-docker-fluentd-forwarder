@@ -1,6 +1,8 @@
 # Docker Fluentd forwarder for LogSense
 
-Run you Fluentd forwader by the Docker Compose:
+Please edit the `docker-compose.yaml` file in order to use your customer token in the `LOGSENSE_TOKEN` env variable.
+
+The next step is to run you Fluentd forwader by the Docker Compose:
 
 ```$ docker-compose up -d```
 
