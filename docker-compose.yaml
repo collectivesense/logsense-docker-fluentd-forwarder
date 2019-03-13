@@ -2,12 +2,9 @@ version: "3"
 
 services:
   logsense-forwarder:
-    image: fluent/fluentd:stable
+    image: collectivesense/logsense-forwarder
     environment:
-      - LOGSENSE_TOKEN="CUSTOMER TOKEN"
-      - FLUENTD_CONF=logsense.conf
-    volumes:
-      - ./logsense.conf:/fluentd/etc/logsense.conf
+      - LOGSENSE_TOKEN="your logsense token"
     ports:
       - "127.0.0.1:24224:24224"
     restart: unless-stopped
